@@ -161,6 +161,13 @@
     <script src="js/app/directives/slideable.js"></script>
     <script src="js/app/directives/ngenter.js"></script>
     <!-- endbuild -->
+    <script>
+    $(document).ajaxError(function (xhr, props) {
+      if (props.status === 401) {
+        location.reload();
+      }
+    });
+    </script>
 </div>
 </body>
 </html>
